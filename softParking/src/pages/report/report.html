@@ -1,0 +1,108 @@
+
+<ion-header>
+
+	<ion-navbar color="blueParking">
+		<ion-title>Reportes</ion-title>
+		<ion-buttons end>
+			<button ion-button icon-only right (click)="logoutUser()">
+				<ion-icon name="log-out"></ion-icon>
+				Cerrar Sesion
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+	<ion-item-divider color="orangeParking">	
+		<b>Cantidad Actual</b>
+	</ion-item-divider>
+
+	<ngx-charts-number-card
+	[view]="view"
+	[results]="CantidadActual_data"
+	xAxis="true"
+	yAxis="true"
+	showXAxisLabel="true"
+	showYAxisLabel="true"
+	scheme="vivid">
+
+</ngx-charts-number-card>
+
+<ion-item-divider color="orangeParking">	
+		<b>Cantidad Disponible</b>
+	</ion-item-divider>
+
+	<ngx-charts-number-card
+	[view]="view"
+	[results]="cantidadDisponible_data"
+	xAxis="true"
+	yAxis="true"
+	showXAxisLabel="true"
+	showYAxisLabel="true"
+	scheme="vivid">
+
+</ngx-charts-number-card>
+
+<ion-item-divider color="orangeParking">	
+	<b>Cantidad Tipo Usuario</b>
+</ion-item-divider>
+
+<ngx-charts-bar-vertical
+[view]="view"
+[results]="cantidadTipoUsuario_data"
+xAxis="true"
+yAxis="true"
+showXAxisLabel="true"
+showYAxisLabel="true"
+xAxisLabel="Persona"
+yAxisLabel="Visitas">
+</ngx-charts-bar-vertical>
+
+<ion-item-divider color="orangeParking">	
+	<b>Cantidad Por Dia</b>
+</ion-item-divider>
+
+<ngx-charts-bar-vertical
+[view]="view"
+[results]="cantidadPorDia_data"
+xAxis="true"
+yAxis="true"
+showXAxisLabel="true"
+showYAxisLabel="true"
+xAxisLabel="Fechas"
+yAxisLabel="Cantidad de Personas">
+</ngx-charts-bar-vertical>
+
+<ion-item-divider color="orangeParking">	
+	<b>Cantidad Tipo de Vehiculo</b>
+</ion-item-divider>
+
+<ngx-charts-pie-chart 
+[view]="view"
+[results]="cantidadTipoVehiculo_data"
+xAxis="true"
+yAxis="true"
+showXAxisLabel="true"
+showYAxisLabel="true"
+labels="true"
+doughnut="true"
+xAxisLabel="Country"
+yAxisLabel="GDP Per Capita"
+scheme="forest">
+
+</ngx-charts-pie-chart>
+
+</ion-content>

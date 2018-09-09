@@ -1,0 +1,48 @@
+
+<ion-header>
+
+	<ion-navbar color="blueParking">
+		<ion-title>Bienvenidos</ion-title>
+		<button ion-button menuToggle end>
+				<ion-icon name="menu"></ion-icon>
+			</button>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="contenido">
+
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content></ion-refresher-content>
+	</ion-refresher>
+	
+	<div align="center">
+		<img *ngIf="imgLogo" class="imagen" [src]="imgLogo">
+	</div>
+
+	<ion-list-header name="tag"></ion-list-header>
+	<form  [formGroup]="formTarjetaId"  novalidate>	
+				<ion-item>
+					<ion-label floating color="primary" >ID</ion-label>
+					<ion-input type="text" formControlName="id" readonly></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label floating color="primary" >Acceso</ion-label>
+					<ion-input type="text" formControlName="acceso" readonly></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label floating color="primary" >Evento</ion-label>
+					<ion-input type="text"  formControlName="evento" readonly></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label floating color="primary" >Plazas Disponibles</ion-label>
+					<ion-input type="text" formControlName="tamanoPlaza" readonly></ion-input>
+				</ion-item>
+			
+	</form>
+
+</ion-content>

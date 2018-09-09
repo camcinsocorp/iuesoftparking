@@ -1,0 +1,14 @@
+ion-toast.error .toast-wrapper {
+    background:   map-get($colors, danger);
+}
+ion-toast.error .toast-message {
+    color: black !important;
+}
+
+ion-toast.success .toast-wrapper {
+     background: map-get($colors, secondary);
+}
+
+ion-toast.success .toast-message {
+    color: black !important;
+}

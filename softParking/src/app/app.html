@@ -1,0 +1,31 @@
+<ion-menu id="authenticated" [content]="content" enable persistent="true" side="right" type="overlay">
+	<ion-header>
+		<ion-toolbar color="blueParking">
+			<ion-title>
+			Menu	
+			</ion-title>
+		</ion-toolbar>
+	</ion-header>
+	
+	<ion-content class="contentMenu">
+		<ion-list inset>
+			<ion-list-header  transparent class="list-header"><b>Navegacion</b></ion-list-header>
+			<button menuClose ion-item class="item_trns" (click)="setHome()" item-right icon-left tappable>
+				<ion-icon name="home" color="blueParking"></ion-icon> 
+				Inicio
+			</button>
+			<ion-list-header  transparent class="list-header"><b>Cuenta</b></ion-list-header>
+			<button menuClose ion-item class="item_trns" (click)="setAdminitradorPage()" item-right icon-left tappable>
+				<ion-icon name="contact" color="blueParking"></ion-icon> 
+				Administrador
+			</button>
+		</ion-list>
+
+	</ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+

@@ -1,0 +1,25 @@
+page-login {
+	.formulario{       
+		padding: 1%;
+		width: 80%;
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		background-color: rgba(128,128,128,0.71);
+		
+		
+
+	}
+
+	.item{
+		margin-bottom: 10px;
+		background-color: rgba(255,255,255,0.5);
+		border: medium none;
+
+		.label{
+			color: black !important;  
+		}
+
+	}
+}

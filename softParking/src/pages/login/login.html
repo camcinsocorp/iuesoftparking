@@ -1,0 +1,31 @@
+<ion-header>
+
+	<ion-navbar color="blueParking">
+		<ion-title>Iniciar Sesion</ion-title>
+		<button ion-button menuToggle end>
+				<ion-icon name="menu"></ion-icon>
+			</button>
+	</ion-navbar>
+
+</ion-header>
+<ion-content >
+	<form [formGroup] = "formLogin" class="formulario" (ngSubmit)= "login()" novalidate>
+
+		<ion-item>  
+			<ion-label floating >Correo Electronico</ion-label>
+			<ion-input type="email" formControlName="email"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating >Contraseña</ion-label>
+			<ion-input type="password" formControlName="password" ></ion-input>
+		</ion-item>
+
+		<button ion-button full id="buttonForm" ion-button type="submit" color="blueParking" style="color: black;">Entrar</button>
+	</form>
+
+
+
+
+
+</ion-content>
